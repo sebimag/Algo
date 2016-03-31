@@ -1,49 +1,53 @@
-
-
 package body tree is
 
         function New_Tree return Tree is
-                T: Tree;
         Begin
-                T := new Node'((others => null), 'A', Empty_list);
-                return T;
+                return new Node'((others => null), 'a', Empty_list);
         End;
 
         procedure Insertion(T : in out Tree ; Word : in String) is
            Compteur: Natural:= 0;
-           Nouveau_Noeud: Tree;
         begin
-           if T.Letter = '[' then
+           if T.Letter = '{' then
               T.L.Append(To_Unbounded_String(Word));
            else
-              for I in 0..(Length(To_Unbounded_String(Word))-1) loop
-                 if Word(I) = T.letter then
-                    Compteur:= Compteur + 1;
+              for I in Word'Range loop
+                 if Word(I) = T.Letter then
+                    Compteur:=Compteur+1;
                  end if;
               end loop;
               if T.Fils(Compteur) = null then
-                 Nouveau_Noeud:= new Node'((others=>null), character'Succ(T.Letter), Empty_list);
-                 T.Fils(Compteur):= Nouveau_Noeud;
+                 T.Fils(Compteur) := new Node'((others=>null), character'Succ(T.Letter), Empty_list);
               end if;
               Insertion(T.Fils(Compteur), Word);
            end if;
-        End;
+        end insertion;
 
+        procedure display(L : List) is
+          C: Liste.Cursor := First(L);
+        begin
+           while Has_Element(C) loop
+              Put("[" & To_String(Element(C)) & "] , ");
+              Next(C);
+           end loop;
+        end display;
 
         procedure Search_And_Display(T : in Tree ; Letters : in String) is
-           Compteur : Integer := 0;
-        Begin
+        compteur : Natural := 0;
+        begin
+           if T /= null then
             if (T.Letter /= '{') then
-                for I in 0..(Length(To_Unbounded_String(Letters))-1) loop
-                    If (Letters(I) = T.Letter) then
+                for I in Letters'Range loop
+                    If Letters(I) = T.Letter then
                         Compteur := Compteur + 1;
                     end if;
                 end loop;
-                Search_And_Display(T.Fils(Compteur), Letters);
+                for I in 0..Compteur loop
+                   Search_And_Display(T.Fils(I), Letters);
+                end loop;
             else
-                display(T.list);
+               display(T.L);
             end if;
-
-        End;
-
+           end if;
+        end Search_And_Display;
 end tree;
