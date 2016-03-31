@@ -35,19 +35,18 @@ package body tree is
         procedure Search_And_Display(T : in Tree ; Letters : in String) is
         compteur : Natural := 0;
         begin
-           if T /= null then
-            if (T.Letter /= '{') then
-                for I in Letters'Range loop
-                    If Letters(I) = T.Letter then
-                        Compteur := Compteur + 1;
-                    end if;
-                end loop;
-                for I in 0..Compteur loop
-                   Search_And_Display(T.Fils(I), Letters);
-                end loop;
-            else
-               display(T.L);
-            end if;
+            if(T /= null and then T.Letter /= '{') then
+              for I in Letters'Range loop
+                 If Letters(I) = T.Letter then
+                    Search_And_Display(T.Fils(compteur), Letters);
+                    Compteur := Compteur + 1;
+                  end if;
+              end loop;
+              Search_And_Display(T.Fils(Compteur), Letters);
+           elsif T /= null then
+              display(T.L);
            end if;
         end Search_And_Display;
 end tree;
+--En Une Page maggle!
+--Et il reste même de la place!
