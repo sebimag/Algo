@@ -1,0 +1,85 @@
+V "GNAT Lib v4.9"
+M P W=b
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U words%b		words.adb		17b3db78 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W tree%s		tree.adb		tree.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-charac.ads		20070912115821 2d3ec45b
+D a-chlat1.ads		20140225151544 66457d31
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-string.ads		20070406091342 90ac6797
+D a-strmap.ads		20090409150019 9cb836fb
+D a-strunb.ads		20120426100351 3f91d4c5
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D system.ads		20120723080122 f2f2d889
+D s-atocou.ads		20131010110730 cd7c94ca
+D s-atocou.adb		20131010121735 62bad392
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-secsta.ads		20140225151139 86a2856d
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-stposu.ads		20121005142121 ffeba1c5
+D s-stratt.ads		20131014135145 aedef97e
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+D tree.ads		20160330211229 bacf6c3d
+D words.adb		20160318132743 95114291
+X 1 ada.ads
+16K9*Ada 19e8 39|2r6 3r5
+X 12 a-textio.ads
+49K13*Text_IO 471e16 39|2w10 3r9
+52P9*File_Type 39|8r14
+53n23*In_File{53E9} 39|11r18
+92U14*Open 39|11s7
+98U14*Close 39|19s11
+117V13*Standard_Input{52P9} 39|28s31 30s54
+183V13*End_Of_File{boolean} 39|12s21 28s19
+253V13*Get_Line{string} 39|14s44 30s45
+263U14*Put_Line 39|27s9 33s25
+X 38 tree.ads
+4K9*Tree 15e9 39|2w19 3r18 7r63 9r15 23r13
+6P14*Tree 39|7r68 9r20 23r18
+7V18*New_Tree{6P14} 39|9s28
+8U19*Insertion 39|16s27
+9U19*Search_And_Display 39|32s25
+X 39 words.adb
+6U11*Words 6b11 36l5 36t10
+7V18 Read_Words_File{38|6P14} 7b18 7>34 21l13 21t28 26s14
+7s34 File_Name{string} 11r27
+8p7 File{12|52P9} 11m12 11r12 12r33 14r53 19m17 19r17
+9p11 T{38|6P14} 16m37 16r37 20r18
+14a27 Line{string} 16r40
+23p9 T{38|6P14} 26m9 32r44
+30a25 Letters{string} 32r47
+
