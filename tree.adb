@@ -1,20 +1,21 @@
 with Ada.Strings.Unbounded;
 use Ada.Strings.Unbounded;
 
+--git put et fromages!!!
 
 package body tree is
 
-	function New_Tree return Tree is
-	Begin
+        function New_Tree return Tree is
+        Begin
 
-	End;
+        End;
 
-	procedure Insertion(T : in out Tree ; Word : in String) is
-	Begin
+        procedure Insertion(T : in out Tree ; Word : in String) is
+        Begin
 
-	End;
+        End;
 
-	procedure Search_And_Display(T : in Tree ; Letters : in String) is
-	Begin
+        procedure Search_And_Display(T : in Tree ; Letters : in String) is
+        Begin
 
-	End;
+        End;
