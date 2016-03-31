@@ -1,11 +1,14 @@
 with Ada.Strings.Unbounded;
 use Ada.Strings.Unbounded;
+with Ada.Containers.Doubly_Linked_Lists;
+
+
 
 package Tree is
-
+        package Liste is new Ada.Containers.Doubly_Linked_Lists(Element_Type => Unbounded_String);
+        use Liste;
         M: constant := 3;
         subtype Indice is Integer range 0..M;
-
 
         type Tree is private;
         function New_Tree return Tree;
@@ -18,5 +21,7 @@ private
         type Tab is array(Indice) of Tree;
         type Node is record
            Fils : Tab;
+           letter: character;
+           L: Liste.List;
         end record;
 end Tree;
