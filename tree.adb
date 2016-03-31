@@ -1,5 +1,4 @@
 
-
 package body tree is
 
         function New_Tree return Tree is
@@ -30,20 +29,25 @@ package body tree is
         End;
 
 
+	procedure display(L : List) is
+	Begin
+		Put(L(First(L)));
+	End;
+
         procedure Search_And_Display(T : in Tree ; Letters : in String) is
-        Begin
+        compteur : Natural := 0;
+	Begin
             if (T.Letter /= '{') then
-                Compteur : Integer := 0;
                 for I in 0..(Length(To_Unbounded_String(Letters))-1) loop
                     If (Letters(I) = T.Letter) then
                         Compteur := Compteur + 1;
                     end if;
                 end loop;
-                Search_And_Display(T.Fils(Compteurs), Letters);
+                Search_And_Display(T.Fils(Compteur), Letters);
             else
-                display(T.list);
+		put(Letters);
+                display(T.l);
             end if;
 
         End;
-
 end tree;
