@@ -9,12 +9,12 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV SPARK_05
 
-U words%b		words.adb		2bd0b1d4 NE OO SU
+U wordso%b		wordso.adb		df00734c NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
-W tree%s		tree.adb		tree.ali
+W treeo%s		treeo.adb		treeo.ali
 
 D ada.ads		20150506105328 3ffc8e18 ada%s
 D a-charac.ads		20150506105330 2d3ec45b ada.characters%s
@@ -54,8 +54,8 @@ D s-stratt.ads		20150506105327 aedef97e system.stream_attributes%s
 D s-traent.ads		20150506105327 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150506105330 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150506105330 1b7d22d2 system.wch_con%s
-D tree.ads		20160412162405 b7f146f7 tree%s
-D words.adb		20160406181327 a44c02f7 words%b
+D treeo.ads		20160412162352 4a57f36e treeo%s
+D wordso.adb		20160412150622 ad3a75f6 wordso%b
 X 1 ada.ads
 16K9*Ada 19e8 40|2r6 3r5
 X 9 a-iteint.ads
@@ -74,14 +74,14 @@ X 15 a-textio.ads
 183V13*End_Of_File{boolean} 40|12s21 28s19
 253V13*Get_Line{string} 40|14s44 30s45
 263U14*Put_Line 40|27s9 34s20
-X 39 tree.ads
-4K9*Tree 27e9 40|2w19 3r18 7r63 9r15 23r13
-10P14*Tree 40|7r68 9r20 23r18
-12V18*New_Tree{10P14} 40|9s28
-13U19*Insertion 40|16s27
-14U19*Search_And_Display 40|32s20
-X 40 words.adb
-6U11*Words 6b11 37l5 37t10
+X 39 treeo.ads
+4K9*Treeo 29e10 40|2w19 3r18 7r63 9r15 23r13
+10P14*Tree 40|7r69 9r21 23r19
+13V18*New_Tree{10P14} 40|9s29
+14U19*Insertion 40|16s27
+15U19*Search_And_Display 40|32s20
+X 40 wordso.adb
+6U11*Wordso 6b11 37l5 37t11
 7V18 Read_Words_File{39|10P14} 7b18 7>34 21l13 21t28 26s14
 7a34 File_Name{string} 11r27
 8p7 File{15|52P9} 11m12 11r12 12r33 14r53 19m17 19r17

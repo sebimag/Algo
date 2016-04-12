@@ -4,7 +4,7 @@ use Ada.Strings.Unbounded, Ada.Text_IO;
 package Tree is
         package Liste is new Ada.Containers.Doubly_Linked_Lists(Element_Type => Unbounded_String);
         use Liste;
-        M: constant := 4;
+        M: constant := 5;
         subtype Indice is Integer range 0..M;
 
         type Tree is private;

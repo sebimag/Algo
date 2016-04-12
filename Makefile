@@ -1,21 +1,25 @@
 CC=gnatmake
 
+all: alea words wordso
 
-alea: alea.o 
+alea: 
+	clang ./tests/alea.c -o ./tests/alea
 
 words: 
 	gnatmake words.adb
 
+wordso: 
+	gnatmake -D ./optimisation ./optimisation/wordso.adb -o ./optimisation/wordso
 
-test:  words
-	./random_input.pl 10 1000 > req.txt
-	time ./words < req.txt > /dev/null
 
 courbe:
-	./courbe.sh
+	./tests/courbe.sh
 
-
+tests: all
+	tests/courbe_double.sh
 
 .PHONY: clean
 clean:
-	rm -f *~ *.o test words
+	rm -f *~ *.o words *.txt *.ali
+	rm -f ./optimisation/*.txt optimisation/*.o ./optimisation/*.ali ./optimisation/*~ ./optimisation/wordso
+	rm -f tests/alea tests/*.txt
