@@ -2,7 +2,7 @@ package body treeo is
 
         function New_Tree return Tree is
         Begin
-                return new Node'((others => null), 'w', Empty_list);
+                return new Node'((others => null), 'a', Empty_list);
         End;
 
         procedure Insertion(T : in out Tree ; Word : in String) is
@@ -66,60 +66,60 @@ package body treeo is
         function Succ(C: In Character) return Character is
         begin
            case C is
-              when 'w' =>
-                 return 'k';
-              when 'k' =>
-                 return 'y';
-              when 'y' =>
-                 return 'x';
-              when 'x' =>
-                 return 'z';
-              when 'z' =>
-                 return 'h';
-              when 'h' =>
-                 return 'j';
-              when 'j' =>
-                 return 'f';
-              when 'f' =>
+              when 'a' =>
                  return 'b';
               when 'b' =>
-                 return 'g';
-              when 'g' =>
-                 return 'q';
-              when 'q' =>
-                 return 'v';
-              when 'v' =>
                  return 'c';
               when 'c' =>
-                 return 'p';
-              when 'p' =>
-                 return 'm';
-              when 'm' =>
                  return 'd';
               when 'd' =>
-                 return 'o';
-              when 'o' =>
-                 return 'l';
-              when 'l' =>
-                 return 'u';
-              when 'u' =>
-                 return 'r';
-              when 'r' =>
-                 return 'n';
-              when 'n' =>
-                 return 't';
-              when 't' =>
-                 return 's';
-              when 's' =>
-                 return 'i';
-              when 'i' =>
-                 return 'a';
-              when 'a' =>
                  return 'e';
               when 'e' =>
+                 return 'f';
+              when 'f' =>
+                 return 'g';
+              when 'g' =>
+                 return 'h';
+              when 'h' =>
+                 return 'i';
+              when 'i' =>
+                 return 'j';
+              when 'j' =>
+                 return 'k';
+              when 'k' =>
+                 return 'l';
+              when 'l' =>
+                 return 'm';
+              when 'm' =>
+                 return 'n';
+              when 'n' =>
+                 return 'o';
+              when 'o' =>
+                 return 'p';
+              when 'p' =>
+                 return 'q';
+              when 'q' =>
+                 return 'r';
+              when 'r' =>
+                 return 's';
+              when 's' =>
+                 return 't';
+              when 't' =>
+                 return 'u';
+              when 'u' =>
+                 return 'v';
+              when 'v' =>
+                 return 'w';
+              when 'w' =>
+                 return 'x';
+              when 'x' =>
+                 return 'y';
+              when 'y' =>
+                 return 'z';
+              when 'z' =>
                  return '{';
               when others =>
-                 return 'w';
+                 return 'a';
            end case;
 
         end Succ;

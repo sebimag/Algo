@@ -16,7 +16,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U treeo%b		treeo.adb		e47dc7f9 NE OO PK IL
+U tree%b		tree.adb		f000e84b NE OO PK IL
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W interfaces%s		interfac.ads		interfac.ali
@@ -28,7 +28,7 @@ W system.storage_elements%s  s-stoele.adb	s-stoele.ali
 W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 
-U treeo%s		treeo.ads		147c226e EE OO PF PK
+U tree%s		tree.ads		e9da97f7 EE OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.doubly_linked_lists%s
@@ -99,8 +99,8 @@ D s-ststop.ads		20150506105327 e6693757 system.strings.stream_ops%s
 D s-traent.ads		20150506105327 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20150506105330 9d58a4c0 system.unsigned_types%s
 D s-wchcon.ads		20150506105330 1b7d22d2 system.wch_con%s
-D treeo.ads		20160412162352 4a57f36e treeo%s
-D treeo.adb		20160413152712 ae2a3497 treeo%b
+D tree.ads		20160412162405 b7f146f7 tree%s
+D tree.adb		20160412092240 47f1aebc tree%b
 X 1 ada.ads
 16K9*Ada 19e8 47|1r6 1r29 1r65 2r5 2r28 5r30
 X 4 a-contai.ads
@@ -108,9 +108,9 @@ X 4 a-contai.ads
 X 5 a-cdlili.ads
 40+9 Element_Type 47|5r65
 45k24*Doubly_Linked_Lists 407e39 47|1w44 5r45
-49R9*List<8|43R9> 47|27r26[5] 48|32r31[47|5]
+49R9*List<8|43R9> 47|25r26[5] 48|32r31[47|5]
 58R9*Cursor 48|33r26[47|5]
-61r4*Empty_List{49R9[47|5]} 48|5r57[47|5] 26r121[47|5]
+61r4*Empty_List{49R9[47|5]} 48|5r57[47|5] 26r131[47|5]
 65V13*Has_Element{boolean} 48|35s23[47|5]
 78V13*Element{14|79R9} 48|36s45[47|5]
 146U14*Append 48|23s29[47|5]
@@ -129,7 +129,6 @@ X 14 a-strunb.ads
 166V14*"="{boolean} 5|42i19
 X 16 a-textio.ads
 49K13*Text_IO 471e16 47|1w69 2r32
-208U14*Put 48|55s25
 242U14*Put 48|36s25
 X 21 system.ads
 67M9*Address
@@ -139,72 +138,43 @@ X 29 s-memory.ads
 76V13*Realloc{21|67M9} 105i<c,__gnat_realloc>22
 X 36 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 47 treeo.ads
-4K9*Treeo 21E14 29l5 29e10 48|1b14 127l5 127t10
-5K17*Liste[5|45] 6r13 27r20 48|33r20
+X 47 tree.ads
+4K9*Tree 19E14 27l5 27e9 48|1b14 63l5 63t9
+5K17*Liste[5|45] 6r13 25r20 48|33r20
 7N9*M 8r44 48|13r64 45r57
-8I17*Indice{integer} 23r27
-10P14*Tree 13r34 14r40 15r45 16r44 17r49 22c14 23r38 48|3r34 8r40 20r44 41r45
+8I17*Indice{integer} 21r27
+10P14*Tree 12r34 13r40 14r45 15r44 16r49 20c14 21r38 48|3r34 8r40 20r44 41r45
 . 52r49
-11A14*Alphabet(natural)<integer> 16r85 17r93 48|9r24 20r82 42r24 52r93
-12E14*AlphabetOpt 12e134
-12n30*'e'{12E14}
-12n34*'a'{12E14}
-12n38*'i'{12E14}
-12n42*'s'{12E14}
-12n46*'t'{12E14}
-12n50*'n'{12E14}
-12n54*'r'{12E14}
-12n58*'u'{12E14}
-12n62*'l'{12E14}
-12n66*'o'{12E14}
-12n70*'d'{12E14}
-12n74*'m'{12E14}
-12n78*'p'{12E14}
-12n82*'c'{12E14}
-12n86*'v'{12E14}
-12n90*'q'{12E14}
-12n94*'g'{12E14}
-12n98*'b'{12E14}
-12n102*'f'{12E14}
-12n106*'j'{12E14}
-12n110*'h'{12E14}
-12n114*'z'{12E14}
-12n118*'x'{12E14}
-12n122*'y'{12E14}
-12n126*'k'{12E14}
-12n130*'w'{12E14}
-13V18*New_Tree{10P14} 48|3b18 6t12
-14U19*Insertion 14=29 14>47 48|8b19 18l13 18t22
-14p29 T{10P14} 48|8b29 17m26
-14a47 Word{string} 48|8b47 11r21 12r49 12r86 13r52 17r30
-15U19*Search_And_Display 15>38 15>52 48|41b19 50l13 50t31
-15p38 T{10P14} 48|41b38 49r35
-15a52 Letters{string} 48|41b52 44r21 45r42 46r41 46r81 49r39
-16U19*Insertion_Rec 16=33 16>51 16>70 48|17s12 20b19 28s25 30l13 30t26
-16p33 T{10P14} 48|20b33 22r20 23r25 25r28 25r59 26r33 26r64 26r110 28r39
+11A14*Alphabet(natural)<integer> 15r85 16r93 48|9r24 20r82 42r24 52r93
+12V18*New_Tree{10P14} 48|3b18 6t12
+13U19*Insertion 13=29 13>47 48|8b19 18l13 18t22
+13p29 T{10P14} 48|8b29 17m26
+13a47 Word{string} 48|8b47 11r21 12r49 12r86 13r52 17r30
+14U19*Search_And_Display 14>38 14>52 48|41b19 50l13 50t31
+14p38 T{10P14} 48|41b38 49r35
+14a52 Letters{string} 48|41b52 44r21 45r42 46r41 46r81 49r39
+15U19*Insertion_Rec 15=33 15>51 15>70 48|17s12 20b19 28s25 30l13 30t26
+15p33 T{10P14} 48|20b33 22r20 23r25 25r28 25r59 26r33 26r64 26r120 28r39
 . 28r70
-16a51 Word{string} 48|20b51 23r56 28r83
-16a70 OccLetter{11A14} 48|20b70 25r35 26r40 28r46 28r89
-17U19*Search_And_Display_rec 17>42 17>56 17>78 48|49s12 52b19 57s28 62l13
-. 62t35
-17p42 T{10P14} 48|52b42 54r15 54r34 55r29 56r61 57r51 59r23 60r33
-17a56 Letters{string} 48|52b56 57r62
-17a78 OccLetter{11A14} 48|52b78 56r37 57r71
-18V18*Succ{character} 18>23 48|26s105 66b18 125l13 125t17
-18e23 C{character} 48|66b23 68r17
-21R14 Node 22r29 24c14 28e19 48|5r28 26r83
-23A14 Tab(10P14)<integer> 25r24
-25a17*Fils{23A14} 48|25r30 26m35 28m41 57r53
-26e17*letter{character} 48|22r22 25r61 26r66 26r112 28r72 54r36 55r31 56r63
-27r17*L{5|49R9[5]} 48|23m27 60r35
-X 48 treeo.adb
+15a51 Word{string} 48|20b51 23r56 28r83
+15a70 OccLetter{11A14} 48|20b70 25r35 26r40 28r46 28r89
+16U19*Search_And_Display_rec 16>42 16>56 16>78 48|49s12 52b19 56s28 61l13
+. 61t35
+16p42 T{10P14} 48|52b42 54r15 54r34 55r61 56r51 58r23 59r33
+16a56 Letters{string} 48|52b56 56r62
+16a78 OccLetter{11A14} 48|52b78 55r37 56r71
+19R14 Node 20r29 22c14 26e19 48|5r28 26r83
+21A14 Tab(10P14)<integer> 23r24
+23a17*Fils{21A14} 48|25r30 26m35 28m41 56r53
+24e17*letter{character} 48|22r22 25r61 26r66 26r122 28r72 54r36 55r63
+25r17*L{5|49R9[5]} 48|23m27 59r35
+X 48 tree.adb
 9a12 OccLetter{47|11A14} 12m25 12r62 13r28 17r36
 11i16 I{integer} 12r54 12r91 13r57
-32U19 display 32b19 32>27 39l13 39t20 60s25
+32U19 display 32b19 32>27 39l13 39t20 59s25
 32r27 L{5|49R9[47|5]} 33r42
 33r17 C{5|58R9[47|5]} 35r35 36r53 37m30 37r30
 42a12 OccLetter{47|11A14} 45r18 46m17 46r57 49r48
 44i16 I{integer} 45r50 46r49 46r89
-56i29 I{integer} 57r58
+55i29 I{integer} 56r58
 

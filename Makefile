@@ -6,7 +6,7 @@ alea:
 	clang ./tests/alea.c -o ./tests/alea
 
 words: 
-	gnatmake words.adb
+	gnatmake -D bin words.adb
 
 wordso: 
 	gnatmake -D ./optimisation ./optimisation/wordso.adb -o ./optimisation/wordso
@@ -20,6 +20,7 @@ tests: all
 
 .PHONY: clean
 clean:
-	rm -f *~ *.o words *.txt *.ali
+	rm -f *~ *.o words *.ali
 	rm -f ./optimisation/*.txt optimisation/*.o ./optimisation/*.ali ./optimisation/*~ ./optimisation/wordso
 	rm -f tests/alea tests/*.txt
+	rm -f ./bin/*

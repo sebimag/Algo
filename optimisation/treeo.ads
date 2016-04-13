@@ -9,7 +9,7 @@ package Treeo is
 
         type Tree is private;
         type Alphabet is array(97..122) of Natural;
-        type AlphabetOpt is ('e','a','i','s','t','n','r','u','l','o','d','m','p','c','v','q','g','b','f','j','h','z','x','y','k','w');
+        type AlphabetOpt is ('w','k','y','x','z','h','j','f','b','g','q','v','c','p','m','d','o','l','u','r','n','t','s','i','a','e');
         function New_Tree return Tree;
         procedure Insertion(T : in out Tree ; Word : in String);
         procedure Search_And_Display(T : in Tree ; Letters : in String);

@@ -1,0 +1,92 @@
+V "GNAT Lib v2015"
+M P W=b
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U words%b		words.adb		2bd0b1d4 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W tree%s		tree.adb		tree.ali
+
+D ada.ads		20150506105328 3ffc8e18 ada%s
+D a-charac.ads		20150506105330 2d3ec45b ada.characters%s
+D a-chlat1.ads		20150506105329 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20150506105327 61e5e089 ada.containers%s
+D a-cdlili.ads		20150506105327 59d7f011 ada.containers.doubly_linked_lists%s
+D a-except.ads		20150506105328 5250cb69 ada.exceptions%s
+D a-finali.ads		20150506105331 69f99942 ada.finalization%s
+D a-ioexce.ads		20150506105327 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20150506105329 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20150506105329 119b8fb3 ada.streams%s
+D a-string.ads		20150506105330 90ac6797 ada.strings%s
+D a-strmap.ads		20150506105329 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20150506105327 3f91d4c5 ada.strings.unbounded%s
+D a-tags.ads		20150506105332 dc4d0634 ada.tags%s
+D a-textio.ads		20150506105332 386df5d4 ada.text_io%s
+D a-unccon.ads		20150506105331 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20150506105327 6033a23f interfaces%s
+D i-cstrea.ads		20150506105327 e53d8b8e interfaces.c_streams%s
+D system.ads		20150506105329 1d274481 system%s
+D s-atocou.ads		20150506105332 cd7c94ca system.atomic_counters%s
+D s-crtl.ads		20150506105326 0ebbdb71 system.crtl%s
+D s-exctab.ads		20150506105331 54135002 system.exception_table%s
+D s-ficobl.ads		20150506105333 078245e4 system.file_control_block%s
+D s-finmas.ads		20150506105330 814daec4 system.finalization_masters%s
+D s-finroo.ads		20150506105331 4ff27390 system.finalization_root%s
+D s-parame.ads		20150506105331 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20150506105326 542f33d0 system.pool_global%s
+D s-secsta.ads		20150506105331 86a2856d system.secondary_stack%s
+D s-soflin.ads		20150506105328 aa763b52 system.soft_links%s
+D s-stache.ads		20150506105332 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150506105331 fa0a3617 system.standard_library%s
+D s-stoele.ads		20150506105332 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20150506105328 b16154c2 system.storage_pools%s
+D s-stposu.ads		20150506105327 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20150506105327 aedef97e system.stream_attributes%s
+D s-traent.ads		20150506105327 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20150506105330 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20150506105330 1b7d22d2 system.wch_con%s
+D tree.ads		20160412162405 b7f146f7 tree%s
+D words.adb		20160406181327 a44c02f7 words%b
+X 1 ada.ads
+16K9*Ada 19e8 40|2r6 3r5
+X 9 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[5|67]>
+X 13 a-strunb.ads
+166V14*"="{boolean} 5|42i19
+X 15 a-textio.ads
+49K13*Text_IO 471e16 40|2w10 3r9
+52P9*File_Type 40|8r14
+53n23*In_File{53E9} 40|11r18
+92U14*Open 40|11s7
+98U14*Close 40|19s11
+117V13*Standard_Input{52P9} 40|28s31 30s54
+166U14*New_Line 40|33s20
+183V13*End_Of_File{boolean} 40|12s21 28s19
+253V13*Get_Line{string} 40|14s44 30s45
+263U14*Put_Line 40|27s9 34s20
+X 39 tree.ads
+4K9*Tree 27e9 40|2w19 3r18 7r63 9r15 23r13
+10P14*Tree 40|7r68 9r20 23r18
+12V18*New_Tree{10P14} 40|9s28
+13U19*Insertion 40|16s27
+14U19*Search_And_Display 40|32s20
+X 40 words.adb
+6U11*Words 6b11 37l5 37t10
+7V18 Read_Words_File{39|10P14} 7b18 7>34 21l13 21t28 26s14
+7a34 File_Name{string} 11r27
+8p7 File{15|52P9} 11m12 11r12 12r33 14r53 19m17 19r17
+9p11 T{39|10P14} 16m37 16r37 20r18
+14a27 Line{string} 16r40
+23p9 T{39|10P14} 26m9 32r39
+30a25 Letters{string} 32r42
+
