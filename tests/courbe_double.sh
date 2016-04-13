@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f coube.txt
+rm -f courbe.txt
 rm -f courbeopt.txt
 for i in `seq 1 50`;
 do

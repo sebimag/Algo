@@ -12,11 +12,23 @@ wordso:
 	gnatmake -D ./optimisation ./optimisation/wordso.adb -o ./optimisation/wordso
 
 
-courbe:
+courbe: words
 	./tests/courbe.sh
+
+courbe_opt: wordso
+	./tests/courbe_opt.sh
 
 tests: all
 	tests/courbe_double.sh
+
+test_simple: words
+	tests/test_simple.sh
+
+test_simple_opt: wordso
+	tests/test_simple_opt.sh
+
+test_variance: alea words
+	tests/variance.sh
 
 .PHONY: clean
 clean:

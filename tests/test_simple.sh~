@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+
+./tests/random_input.pl 100 1000 > req.txt   #nb_lettres  nb_mots
+time ./words < tests/req.txt > /dev/null

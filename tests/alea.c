@@ -4,34 +4,31 @@
 #include <stdbool.h>
 #include <string.h>
 
-
-int loiGeometrique(int v)
-{
-  int n = 0;
-  int a = 0;
-  while (a != 1){
-    a = rand()%(v -1) + 1;
-    n+=1;
-  }
-  return n; 
-}
-
+//utilisation: alea moyenne v
 
 int main(int argc, char *argv[])
 {
   srand(time(NULL)); 
-  int lettre = 103;
+  int lettre = 97;
   int n_lettre;
-  int nb_mots = 1000;
-  int v = atoi(argv[0]);  //la variance
+  int nb_mots = 500;
+  int moyenne = atoi(argv[0]);
+  int v = atoi(argv[1]);  //agit sur la variance
 
+  n_lettre = moyenne - v;
   for(int j= 0; j<nb_mots; j++){
-    n_lettre = loiGeometrique(v);
     for(int i=0; i<n_lettre; i++){
       fputc(lettre, stdout); 
     }
     fputc(10, stdout);
-  } 
+  }
+  n_lettre = moyenne + v;
+  for(int j= 0; j<nb_mots; j++){
+    for(int i=0; i<n_lettre; i++){
+      fputc(lettre, stdout); 
+    }
+    fputc(10, stdout);
+  }
   return EXIT_SUCCESS;
 }
 
